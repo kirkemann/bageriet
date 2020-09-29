@@ -1,0 +1,48 @@
+import React from 'react';
+import slide1 from '../Images/slide1.jpg' 
+import slide2 from '../Images/slide2.jpg' 
+import slide3 from '../Images/slide3.jpg'
+
+import Carousel from 'react-bootstrap/Carousel'
+
+const Header = () => {
+    return (
+                       
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={slide1}
+      alt="Det først brød"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={slide2}
+      alt="Godt brød"
+    />
+
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={slide3}
+      alt="blød brød"
+    />
+
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>    )
+
+}
+export default Header;

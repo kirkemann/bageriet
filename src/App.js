@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Footer from './layout/Footer';
-import Header from './layout/Header';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
+import Nyhedsmail from './components/layout/Nyhedsmail';
+import Senestenyt from './components/layout/Senestenyt.js';
 
 function App() {
   return (
@@ -11,8 +13,8 @@ function App() {
         <Header />
       </header>
       <section>
-        <h3>Section</h3>
-        <h3>Main</h3>
+        <Senestenyt />
+        <Nyhedsmail />
       </section>
 
       <footer>
