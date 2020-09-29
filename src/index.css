@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @font-face {
-  font-family: 'Lobster';
-  src: local('Lobster'), url(./fonts/Lobster/Lobster-Regular.ttf) format('truetype');
+  font-family: 'Lobster-Two-Regular';
+  src: local('Lobster-Two-Regular'), url(./fonts/Lobster/LobsterTwo-Regular.ttf) format('truetype');
 }
 
 body {

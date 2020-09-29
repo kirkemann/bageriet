@@ -1,9 +1,10 @@
 body {
   margin: 0;
+  font-family: 'OpenSans';
 
 }
-nav {
-  font-family: 'Lobster', cursive;
+.logo {
+  font-family: 'Lobster-Two-Regular', cursive;
 }
 
 .App {
