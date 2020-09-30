@@ -20,6 +20,19 @@ body {
   background-color: #567289!important;
 }
 
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  bottom: 250px;
+}
+.carousel-caption h2 {
+  font-size: 80px;
+}
+
 .rounded-circle {
   height: 150px;
   width: 150px;
@@ -32,6 +45,12 @@ body {
   background-size: auto;
   height: 300px;
   width: 100%;
+}
+
+.soeg img {
+
+  height: 150px;
+  width: 150px;
 }
 .newsletter {
   padding: 80px 0;

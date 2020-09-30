@@ -28,7 +28,7 @@ const Senestenyt = () => {
         nytliste = senestenyt.map(e => (
 
 
-                <div className="col-4" key={e._id}>
+                <div className="col-12 col-md-4 col-lg-4" key={e._id}>
                         <Image src={"http://localhost:5033/Images/" + e.image} alt="Foto" roundedCircle />
                         <h2>{e.titel}</h2>
                         <p>{e.teaser}</p>

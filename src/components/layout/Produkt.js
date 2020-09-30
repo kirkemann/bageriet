@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 
 
 // helper - apikald
 import { hentProdukter } from '../helpers/apikald'
 
-const Senestenyt = () => {
+const Produkter = () => {
 
     //State
     const [hentProdukt, setHentProdukt] = useState();
@@ -27,12 +28,17 @@ const Senestenyt = () => {
 
         produktliste = hentProdukt.map(e => (
 
+            <Card key={e._id} className="col-12 col-md-4 col-lg-3 my-3">
+            <Card.Img variant="top" src={"http://localhost:5033/Images/" + e.image} alt="Foto" />
+            <Card.Body>
+                <Card.Title>{e.titel}</Card.Title>
+                <Card.Text>
+                {e.teaser}
+                </Card.Text>
+                <Button variant="light">Læs mere her</Button>
+            </Card.Body>
+            </Card>
 
-                <div className="col-12 col-md-4 col-lg-3" key={e._id}>
-                        <Image src={"http://localhost:5033/Images/" + e.image} alt="Foto" thumbnail />
-                        <h2>{e.titel}</h2>
-                        <p>{e.teaser}</p>
-                </div>
 
         ) )
 
@@ -53,4 +59,4 @@ const Senestenyt = () => {
     )
 }
 
-export default Senestenyt
+export default Produkter

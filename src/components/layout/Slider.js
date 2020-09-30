@@ -17,7 +17,7 @@ const Header = () => {
       alt="Det først brød"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
+      <h2 className="logo">First slide label</h2>
 
     </Carousel.Caption>
   </Carousel.Item>
@@ -29,7 +29,7 @@ const Header = () => {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
+      <h2 className="logo">Second slide label</h2>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -40,7 +40,7 @@ const Header = () => {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
+      <h2 className="logo">Third slide label</h2>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>    )

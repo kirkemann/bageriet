@@ -32,22 +32,22 @@ const Navbar = () => {
                         <Link className="nav-link mt-2 text-light" to="/">Forside</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/">Produkter</Link>
+                        <Link className="nav-link mt-2 text-light" to="/produkter">Produkter</Link>
                     </li>
 
-                    <a className="navbar-brand mx-3 logo text-light" to="/"><h1>bageriet</h1></a>
+                    <Link className="navbar-brand mx-3 logo text-light" to="/"><h1>bageriet</h1></Link>
 
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/">Kontakt</Link>
+                        <Link className="nav-link mt-2 text-light" to="/kontakt">Kontakt</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/">Login</Link>
+                        <Link className="nav-link mt-2 text-light" to="/login">Login</Link>
                     </li>
                 </ul>
             </div>
-            <form className="form-inline ml-5 justify-content-end">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Søg</button>
+            <form onSubmit={handleSoeg}>
+                <input name="soeg" type="search" />
+                <input type="submit" value="Søg" />
             </form>
         </nav>
 
