@@ -34,3 +34,11 @@ export const tilmeldNyheder = async (tilmelding) => {
     return response.data;
 
 }
+
+//----------------Hent Kategori------------------------
+export const hentAlleKategori = async () => {
+
+    let response = await axios.get(api.baseUrl + "region") // http://localhost:5021/region
+    return response.data;
+
+}
