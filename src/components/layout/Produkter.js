@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom';
+
 
 
     // helper - apikald
@@ -32,7 +34,7 @@ const Produkter = () => {
 
     if ( kategori && kategori.length) {
         kategoriliste = kategori.map(r => (
-            <button onClick={e => setValgtkategori(e.target.value)} className="my-3" key={r._id} value={r._id}>{r.titel}</button>
+            <button onClick={e => setValgtkategori(e.target.value)} className="my-2 card-link col-12 p-2" key={r._id} value={r._id}>{r.titel}</button>
         ))
 
     }

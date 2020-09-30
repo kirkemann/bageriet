@@ -59,3 +59,15 @@ export const hentProduktID = async (id) => {
     let response = await axios.get(api.baseUrl + "produkter/" + id) // http://localhost:5033/produkter/
     return response.data;
 }
+
+//----------------Kontakt------------------------
+//Post kontakt
+export const opretKontakt = async (besked) => {
+    //lav data fra e.target (formularen) om til form-data som så bliver lavet til et object af input-data
+    let beskedobjekt = Object.fromEntries(new FormData(besked))
+
+    let response = await axios.post(api.baseUrl + "kontakt", beskedobjekt) // http://localhost:5033/kontakt/
+
+    return response.data;
+
+}
