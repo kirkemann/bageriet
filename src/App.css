@@ -20,6 +20,11 @@ body {
   background-color: #567289!important;
 }
 
+.rounded-circle {
+  height: 150px;
+  width: 150px;
+}
+
 .bg-img{
   background-image: url(./components/Images/newsletterbg.jpg);
   background-repeat: no-repeat, repeat;

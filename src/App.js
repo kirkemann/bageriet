@@ -13,7 +13,11 @@ function App() {
         <Header />
       </header>
       <section>
-        <Senestenyt />
+      <div className="container"> 
+          <div className="row"> 
+            <Senestenyt />
+          </div> 
+      </div> 
         <Nyhedsmail />
       </section>
 

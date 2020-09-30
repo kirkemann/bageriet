@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { Link } from 'react-router-dom';
+import Image from 'react-bootstrap/Image'
 
 
 // helper - apikald
@@ -27,11 +27,13 @@ const Senestenyt = () => {
 
         nytliste = senestenyt.map(e => (
 
-        <div className="col-4" key={e._id}>
-            <img src={"http://localhost:5033/Images/" + e.image} alt="Foto"/>
-            <h2>{e.titel}</h2>
-            <p>{e.teaser}</p>
-        </div>
+
+                <div className="col-4" key={e._id}>
+                        <Image src={"http://localhost:5033/Images/" + e.image} alt="Foto" roundedCircle />
+                        <h2>{e.titel}</h2>
+                        <p>{e.teaser}</p>
+                </div>
+
         ) )
 
     }

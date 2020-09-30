@@ -5,15 +5,15 @@ import React from 'react'
 const Nyhedsmail = () => {
     return (
         <div className="bg-img">
-            <main class="newsletter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="content">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Enter your email" />
-                                    <span class="input-group-btn">
-                                        <button class="btn" type="submit">Tilmeld</button>
+            <main className="newsletter">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <div className="content">
+                                <div className="input-group">
+                                    <input type="email" className="form-control" placeholder="Enter your email" />
+                                    <span className="input-group-btn">
+                                        <button className="btn" type="submit">Tilmeld</button>
                                     </span>
                                 </div>
                             </div>
