@@ -43,7 +43,12 @@ const Senestenyt = () => {
             <h2 className="logo my-5">Vi skaber lækkert!brød</h2>
             <p className="mb-5">Der er mange tilgængelige udgaver af Lorem ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud</p>
         
-            {nytliste}
+
+            <div className="container"> 
+                <div className="row my-5"> 
+                    {nytliste}
+                </div> 
+            </div> 
 
             </div>
 
