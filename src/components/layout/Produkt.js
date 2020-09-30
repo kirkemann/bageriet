@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import parse from 'html-react-parser';
 
 
 // helper - apikald
@@ -31,9 +32,11 @@ const Produkter = () => {
             <Card key={e._id} className="col-12 col-md-4 col-lg-3 my-3">
             <Card.Img variant="top" src={"http://localhost:5033/Images/" + e.image} alt="Foto" />
             <Card.Body>
+                
                 <Card.Title>{e.titel}</Card.Title>
                 <Card.Text>
-                {e.teaser}
+                    {e.teaser}
+                    {/* {parse(e.beskrivelse)} */}
                 </Card.Text>
                 <Button variant="light">Læs mere her</Button>
             </Card.Body>

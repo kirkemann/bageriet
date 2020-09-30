@@ -38,7 +38,24 @@ export const tilmeldNyheder = async (tilmelding) => {
 //----------------Hent Kategori------------------------
 export const hentAlleKategori = async () => {
 
-    let response = await axios.get(api.baseUrl + "region") // http://localhost:5021/region
+    let response = await axios.get(api.baseUrl + "kategorier") // http://localhost:5033/kategorier
     return response.data;
 
+}
+
+// ----------------- Hent alle produkter------------------
+//GET alle produkter
+export const alleProdukter = async () => {
+
+    let response = await axios.get(api.baseUrl + "produkter") // http://localhost:5033/produkter
+    return response.data;
+
+}
+
+// ----------------- Hent produkter via id------------------
+//GET hent event ud fra id
+export const hentProduktID = async (id) => {
+
+    let response = await axios.get(api.baseUrl + "produkter/" + id) // http://localhost:5033/produkter/
+    return response.data;
 }
