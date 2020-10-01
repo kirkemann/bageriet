@@ -65,6 +65,10 @@ body {
   opacity: 1.0;
 }
 
+.card-img-top {
+  height: 300px;
+}
+
 .newsletter {
   padding: 80px 0;
   }

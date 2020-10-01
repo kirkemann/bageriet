@@ -34,7 +34,7 @@ const Produkter = () => {
                 
                 <Card.Title>{e.titel}</Card.Title>
                 <Card.Text>
-                    {e.teaser}
+                {e.teaser.substr(0,50) + "......"}
                 </Card.Text>
                 <Link to={"/produkt/" + e._id}>Læs mere</Link>
             </Card.Body>

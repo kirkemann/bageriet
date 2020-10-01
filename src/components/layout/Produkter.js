@@ -60,7 +60,7 @@ const Produkter = () => {
                     
                     <Card.Title>{e.titel}</Card.Title>
                     <Card.Text>
-                        {e.teaser}
+                    {e.teaser.substr(0,100) + "......"}
                     </Card.Text>
                     <Link to={"/produkt/" + e._id}>Læs mere</Link>
                 </Card.Body>
@@ -81,14 +81,14 @@ const Produkter = () => {
 
             <div className="row">
 
-                <div className="col-4">
-                <Card style={{ width: '18rem' }}>
+                <div className="col-12 col-lg-4">
+                <Card>
                     <ListGroup variant="flush">
                         <ListGroup.Item >{kategoriliste}</ListGroup.Item>
                     </ListGroup>
                 </Card>
                 </div>
-                <div className="col-8">
+                <div className="col-12 col-lg-8">
                     <div className="row">
                         {alleproduktliste}
                     </div>

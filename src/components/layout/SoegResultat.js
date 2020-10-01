@@ -22,7 +22,7 @@ const Soegeresultat = (props) => {
 
 
 
-    //Gør events klar til at blive vist på siden
+    //Gør produktet klar til at blive vist på siden
     let soegeliste = <h2>Loading ....</h2>
     let antal = "";
 
