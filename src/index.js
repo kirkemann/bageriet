@@ -1,6 +1,12 @@
 import React from 'react';
+// Bootstrap
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import ReactDOM from 'react-dom';
 import App from './App';
+
+
+
 
 // ROUTER for at kunne lave routes til hhv frontend og admin
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'

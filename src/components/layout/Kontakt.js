@@ -1,28 +1,11 @@
 import React from 'react'
 import Googlemap from '../Images/thumbnail.jpg'
-
-// helper - apikald
-import { opretKontakt } from '../helpers/apikald'
+import Kontaktform from './Kontaktform'
 
 
 
 const Kontakt = () => {
 
-    
-const handleSubmit = async (e) => {
-
-    e.preventDefault(); // så component ikke loader ved submit
-
-
-    opretKontakt(e.target).then(response => {
-        
-        console.log(response)
-
-    })
-
-    e.target.reset() //Tømmer form 
-
-}
 
     return (
         <div className="container">
@@ -32,19 +15,7 @@ const handleSubmit = async (e) => {
 
             <div className="row">
                 <div className="col-6 ">
-                    <form onSubmit={handleSubmit}>
-
-                        <input name="navn" placeholder="Dit navn" required /><br/><br/>
-
-                        <input name="emailadresse" placeholder="Email" required  /><br/><br/>
-
-                        <input name="emne" placeholder="Emne" required  /><br/><br/>
-
-                        <textarea name="besked" placeholder="Din besked" ></textarea><br/><br/>
-
-                        <button type="submit">Tilmeld</button>
-
-                    </form>
+                    <Kontaktform />
 
                 </div>
                 <div className="col-12 col-lg-6 mb-5 text-left">

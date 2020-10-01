@@ -5,23 +5,22 @@ import { tilmeldNyheder } from '../helpers/apikald'
 
 const Nyhedsmail = () => {
 
+//State til at håndtere hvis det går godt med tilmeld
 
-    const [tilmeldt, setTilmeldt] = useState(false)
+const [besked, setBesked] = useState()
 
-
-    const handleSubmit = async (e) => {
+    const handleSend = async (e) => {
     
         e.preventDefault();
     
-        let tilmelding = {
-            email: e.target.email.value
-        }
-    
-        tilmeldNyheder(tilmelding).then(response => {
-             console.log(response)
-            setTilmeldt(true);
-            
-            })
+        //e.target er formularen med dens indhold af input mv.
+        tilmeldNyheder(e.target).then(response => {
+
+            if (response !== "error") {
+                console.log(response);
+                setBesked("Tak for din tilmelding")  
+            }
+        })
     
     }
 
@@ -29,30 +28,31 @@ const Nyhedsmail = () => {
 
         
         <div className="bg-img">
-            <main className="newsletter">
+            <section className="newsletter">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="content">
                             {
             
-                                 !tilmeldt ? 
-
-                                <div className="input-group" onSubmit={handleSubmit}>
-                                    <input type="email" className="form-control" placeholder="Enter your email" required />
+                                besked ? <p> {besked} </p>
+                                :
+                                <form className="input-group" onSubmit={handleSend}>
+                                
+                                    <input type="email" name="email" className="form-control" placeholder="Enter your email" required />
                                     <span className="input-group-btn">
-                                        <button className="btn" type="submit">Tilmeld</button>
+                                    <button className="btn" type="submit">Tilmeld</button>
                                     </span>
-                                </div>
-                                         : 
-                                         <h4>Tak for din tilmelding</h4>
-                                       
-                                 }
+                                </form>
+                        
+                            }
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
+
                
         </div>
     )

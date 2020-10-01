@@ -28,9 +28,14 @@ export const soegProdukt = async (soegord) => {
 }
 
 //----------------Nyhedsmail------------------------
-export const tilmeldNyheder = async (tilmelding) => {
+export const tilmeldNyheder = async (email) => {
 
-    let response = await axios.post(api.baseUrl + "nyhedsbrevtilmelding/", tilmelding) // http://localhost:5033/nyhedsbrevtilmelding/
+    let formdata = new FormData(email)
+
+    let response = await axios.post(api.baseUrl + "nyhedsbrevtilmelding/", formdata) // http://localhost:5033/nyhedsbrevtilmelding/ 
+    .then(response => { return response.data})
+    .catch(error => { return "error"})
+
     return response.data;
 
 }
@@ -62,12 +67,14 @@ export const hentProduktID = async (id) => {
 
 //----------------Kontakt------------------------
 //Post kontakt
-export const opretKontakt = async (besked) => {
-    //lav data fra e.target (formularen) om til form-data som så bliver lavet til et object af input-data
-    let beskedobjekt = Object.fromEntries(new FormData(besked))
+export const sendKontaktbesked = async (besked) => {
 
-    let response = await axios.post(api.baseUrl + "kontakt", beskedobjekt) // http://localhost:5033/kontakt/
+    let formdata = new FormData(besked);
 
-    return response.data;
+    let response = await axios.post(api.baseUrl + "kontakt", formdata) // http://localhost:5033/kontakt/
+    .then(response => { return response.data})
+    .catch(error => { return "error"})
+
+    return response;
 
 }

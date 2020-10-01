@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap');
+
+
+.logo {
+  font-family: 'Lobster', cursive;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,9 +14,7 @@ body {
   font-family: 'OpenSans';
 
 }
-.logo {
-  font-family: 'Lobster-Two-Regular', cursive;
-}
+
 
 .App {
   text-align: center;
@@ -86,6 +91,7 @@ body {
   height: 50px;
   border-color: #ffffff;
   border-radius:0;
+  margin-top: 30px;
   }
   .newsletter .content.form-control:focus {
   box-shadow: none;
@@ -97,6 +103,7 @@ body {
   background: #243c4f;
   color: #fff;
   font-weight:600;
+  margin-top: 30px;
   }
 
 @media (prefers-reduced-motion: no-preference) {
