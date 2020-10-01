@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card'
-import parse from 'html-react-parser';
 
 
 // helper - apikald
@@ -36,9 +35,8 @@ const Produkter = () => {
                 <Card.Title>{e.titel}</Card.Title>
                 <Card.Text>
                     {e.teaser}
-                    {/* {parse(e.beskrivelse)} */}
                 </Card.Text>
-                <Button variant="light">Læs mere her</Button>
+                <Link to={"/produkt/" + e._id}>Læs mere</Link>
             </Card.Body>
             </Card>
 

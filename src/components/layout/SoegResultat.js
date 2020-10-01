@@ -37,7 +37,7 @@ const Soegeresultat = (props) => {
                 <img src={"http://localhost:5033/images/" + e.image} alt="Foto"/>
                 <h2>{e.titel}</h2>
                 <p>{e.teaser.substr(0,50) + "......"}</p>
-                <Link to={"/produkt/" + e._id}>Læs mere om dette event</Link>
+                <Link to={"/produkt/" + e._id}>Læs mere</Link>
             </div>
         ) )
 

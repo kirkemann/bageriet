@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'OpenSans';
@@ -52,6 +56,15 @@ body {
   height: 150px;
   width: 150px;
 }
+
+.tilpas {
+  shape-outside: ellipse(100px 200px at 50% 50%);
+  width: 23%;
+  height: 100%;
+  float: left;
+  opacity: 1.0;
+}
+
 .newsletter {
   padding: 80px 0;
   }
