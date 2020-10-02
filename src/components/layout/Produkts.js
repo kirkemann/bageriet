@@ -51,7 +51,7 @@ const Produkts = (props) => {
         )
 
         likesinfo = (
-            <div type="button" className="btn btn-outline-danger justify-content-end">
+            <div type="button" className="btn btn-outline-danger">
                 <p>Likes {produktid.likes} <FontAwesomeIcon icon="heart" /></p>
             </div>
         )
@@ -93,10 +93,10 @@ const Produkts = (props) => {
         <div>
             <div className="container">
                 <div className="row mt-3">
-                    <div>
+                    <div className="col-9">
                         {overskrift}
                     </div>
-                    <div>{likesinfo} </div>
+                    <div className="col-3">{likesinfo} </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-9 col-12">

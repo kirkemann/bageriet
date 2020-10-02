@@ -78,3 +78,11 @@ export const sendKontaktbesked = async (besked) => {
     return response;
 
 }
+
+// ----------------- Likes ------------------
+//GET hent event ud fra id
+export const tilfojlike = async (id) => {
+
+    let response = await axios.patch(api.baseUrl + "produkter/likes" + id) // http://localhost:5033/produkter/likes
+    return response.data;
+}
