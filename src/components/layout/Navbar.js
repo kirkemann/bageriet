@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../App';
 import { Link, useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
 
@@ -29,25 +30,25 @@ const Navbar = () => {
             <div className="collapse navbar-collapse ml-5 justify-content-center" id="navbarNav">
                 <ul className="navbar-nav align-items-center">
                     <li className="nav-item active">
-                        <Link className="nav-link mt-2 text-light" to="/">Forside</Link>
+                        <Link className="nav-link text-light" to="/">Forside</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/produkter">Produkter</Link>
+                        <Link className="nav-link text-light" to="/produkter">Produkter</Link>
                     </li>
 
                     <Link className="navbar-brand mx-3 logo text-light" to="/"><h1>bageriet</h1></Link>
 
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/kontakt">Kontakt</Link>
+                        <Link className="nav-link text-light" to="/kontakt">Kontakt</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link mt-2 text-light" to="/login">Login</Link>
+                        <Link className="nav-link text-light" to="/login">Login</Link>
                     </li>
                 </ul>
             </div>
             <form onSubmit={handleSoeg}>
                 <input name="soeg" type="search" />
-                <input type="submit" value="Søg" />
+                <button className="soegknap" type="submit"><FontAwesomeIcon icon="search" /></button>
             </form>
         </nav>
 

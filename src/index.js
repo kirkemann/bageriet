@@ -7,7 +7,6 @@ import App from './App';
 
 
 
-
 // ROUTER for at kunne lave routes til hhv frontend og admin
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 

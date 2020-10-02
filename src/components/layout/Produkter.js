@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Card from 'react-bootstrap/Card'
+
 import ListGroup from 'react-bootstrap/ListGroup'
 import { Link } from 'react-router-dom';
 
@@ -33,7 +34,16 @@ const Produkter = () => {
 
     if ( kategori && kategori.length) {
         kategoriliste = kategori.map(r => (
-            <button onClick={e => setValgtkategori(e.target.value)} className="my-2 card-link col-12 p-2" key={r._id} value={r._id}>{r.titel}</button>
+
+            <div className="col-12" key={r._id}>
+            <div className="card my-1">
+                <div className="card-body">
+                    <button onClick={e => setValgtkategori(e.target.value)} className="my-2 btn btn-light col-12" key={r._id} value={r._id}>{r.titel}</button> 
+                </div>
+            </div>
+     
+        </div>
+
         ))
 
     }
@@ -62,7 +72,7 @@ const Produkter = () => {
                     <Card.Text>
                     {e.teaser.substr(0,100) + "......"}
                     </Card.Text>
-                    <Link to={"/produkt/" + e._id}>Læs mere</Link>
+                    <button className="btn btn-outline-dark text-muted" ><Link className="text-reset" to={"/produkt/" + e._id}>Læs mere</Link></button>
                 </Card.Body>
                 </Card>
     
@@ -81,14 +91,10 @@ const Produkter = () => {
 
             <div className="row">
 
-                <div className="col-12 col-lg-4">
-                <Card>
-                    <ListGroup variant="flush">
-                        <ListGroup.Item >{kategoriliste}</ListGroup.Item>
-                    </ListGroup>
-                </Card>
+                <div className="col-12 col-lg-3">
+                    {kategoriliste}
                 </div>
-                <div className="col-12 col-lg-8">
+                <div className="col-12 col-lg-9">
                     <div className="row">
                         {alleproduktliste}
                     </div>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card'
 
 // helper - apikald
 import { soegProdukt } from '../helpers/apikald'
@@ -33,12 +34,17 @@ const Soegeresultat = (props) => {
         
         soegeliste = soege.map(e => (
 
-            <div className="soeg my-4" key={e._id}>
-                <img src={"http://localhost:5033/images/" + e.image} alt="Foto"/>
-                <h2>{e.titel}</h2>
-                <p>{e.teaser.substr(0,50) + "......"}</p>
-                <Link to={"/produkt/" + e._id}>Læs mere</Link>
-            </div>
+            <Card key={e._id} className="col-12 col-lg-4 my-3">
+                <Card.Img variant="top" src={"http://localhost:5033/Images/" + e.image} alt="Foto" />
+                <Card.Body>
+                    
+                    <Card.Title>{e.titel}</Card.Title>
+                    <Card.Text>
+                    {e.teaser.substr(0,50) + "......"}
+                    </Card.Text>
+                    <button className="btn btn-outline-dark text-muted" ><Link className="text-reset" to={"/produkt/" + e._id}>Læs mere</Link></button>
+                </Card.Body>
+            </Card>
         ) )
 
 
@@ -46,12 +52,14 @@ const Soegeresultat = (props) => {
 
 
     return (
-        <div>
-            <h1>Søgeresultat</h1>
-            {antal}
-            {soegeliste}
-            
-        </div>
+        <div className="container"> 
+                <h1>Søgeresultat</h1>
+                {antal}
+            <div className="row my-5"> 
+
+                {soegeliste}
+            </div> 
+        </div> 
     )
 }
 

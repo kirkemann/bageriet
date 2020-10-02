@@ -74,12 +74,16 @@ body {
   height: 300px;
 }
 
+.tekst {
+  margin-left: 8rem !important;
+}
+
 .newsletter {
   padding: 80px 0;
   }
   
   .newsletter .content {
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -91,7 +95,7 @@ body {
   height: 50px;
   border-color: #ffffff;
   border-radius:0;
-  margin-top: 30px;
+
   }
   .newsletter .content.form-control:focus {
   box-shadow: none;
@@ -100,10 +104,35 @@ body {
   .newsletter .content .btn {
   min-height: 50px; 
   border-radius:0;
-  background: #243c4f;
+  background: #567289;
   color: #fff;
   font-weight:600;
-  margin-top: 30px;
+ 
+  }
+
+  .input-group-text {
+    color: #fff;
+    background-color: #b7c9d6;
+    border-radius: 0;
+    border: none;
+  }
+
+  .sendknap {
+
+    min-height: 50px;
+    border-radius: 0;
+    background: #567289;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 78%;
+  }
+
+  .soegknap {
+    min-height: 30px;
+    border-radius: 0;
+    background: #b7c9d6;
+    color: #fff;
+    font-weight: 600;
   }
 
 @media (prefers-reduced-motion: no-preference) {

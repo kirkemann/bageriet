@@ -14,14 +14,14 @@ const Kontakt = () => {
 
 
             <div className="row">
-                <div className="col-6 ">
+                <div className="col-12 col-lg-6 ">
                     <Kontaktform />
 
                 </div>
                 <div className="col-12 col-lg-6 mb-5 text-left">
 
-                            <p className="text-left">addresse: Øster uttrup 1 9200 aalborg</p>
-                            <p className="text-left">telefon: +45 25 26 95 40</p>
+                            <p className="text-left"><span className="font-weight-bold">addresse:</span> Øster uttrup 1 9200 aalborg</p>
+                            <p className="text-left"><span className="font-weight-bold">telefon:</span> +45 25 26 95 40</p>
 
 
                         <img src={Googlemap} alt="google maps" />

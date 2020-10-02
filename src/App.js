@@ -1,4 +1,5 @@
 import React from 'react';
+import "./components/FontAwesomeIcons/FontAwesome"
 import {Route} from 'react-router-dom';
 import './App.css';
 import Footer from './components/layout/Footer';

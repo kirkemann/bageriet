@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import parse from 'html-react-parser';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
@@ -51,7 +52,7 @@ const Produkts = (props) => {
 
         likesinfo = (
             <div type="button" className="btn btn-outline-danger justify-content-end">
-                <p>Likes {produktid.likes}</p>
+                <p>Likes {produktid.likes} <FontAwesomeIcon icon="heart" /></p>
             </div>
         )
 
@@ -95,7 +96,7 @@ const Produkts = (props) => {
                     <div>
                         {overskrift}
                     </div>
-                    <div>{likesinfo}</div>
+                    <div>{likesinfo} </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-9 col-12">

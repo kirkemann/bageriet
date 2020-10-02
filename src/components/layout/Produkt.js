@@ -36,7 +36,7 @@ const Produkter = () => {
                 <Card.Text>
                 {e.teaser.substr(0,50) + "......"}
                 </Card.Text>
-                <Link to={"/produkt/" + e._id}>Læs mere</Link>
+                <button className="btn btn-outline-dark text-muted" ><Link className="text-reset" to={"/produkt/" + e._id}>Læs mere</Link></button>
             </Card.Body>
             </Card>
 
